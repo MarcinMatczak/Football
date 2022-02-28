@@ -1,0 +1,8 @@
+t.append(LE_cwiercfinal.objects.get_or_create(name = LE_cwiercfinal_list[0].name,image = LE_cwiercfinal_list[0].image,country = LE_cwiercfinal_list[0].country)[0])
+t.append(LE_cwiercfinal.objects.get_or_create(name = LE_cwiercfinal_list[1].name,image = LE_cwiercfinal_list[1].image,country = LE_cwiercfinal_list[1].country)[0])
+t.append(LE_cwiercfinal.objects.get_or_create(name = LE_cwiercfinal_list[2].name,image = LE_cwiercfinal_list[2].image,country = LE_cwiercfinal_list[2].country)[0])
+t.append(LE_cwiercfinal.objects.get_or_create(name = LE_cwiercfinal_list[3].name,image = LE_cwiercfinal_list[3].image,country = LE_cwiercfinal_list[3].country)[0])
+t.append(LE_cwiercfinal.objects.get_or_create(name = LE_cwiercfinal_list[4].name,image = LE_cwiercfinal_list[4].image,country = LE_cwiercfinal_list[4].country)[0])
+t.append(LE_cwiercfinal.objects.get_or_create(name = LE_cwiercfinal_list[5].name,image = LE_cwiercfinal_list[5].image,country = LE_cwiercfinal_list[5].country)[0])
+t.append(LE_cwiercfinal.objects.get_or_create(name = LE_cwiercfinal_list[6].name,image = LE_cwiercfinal_list[6].image,country = LE_cwiercfinal_list[6].country)[0])
+t.append(LE_cwiercfinal.objects.get_or_create(name = LE_cwiercfinal_list[7].name,image = LE_cwiercfinal_list[7].image,country = LE_cwiercfinal_list[7].country)[0])

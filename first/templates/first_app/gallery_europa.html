@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends "first_app/index.html" %}
+{% load static %}
+{% load index %}
+{% block body_block2 %}
+  <table class="gallery_table">
+    <thead>
+      <th></th>
+      <th><img src="{% static 'images/lm_herb.png' %}" style = "width:320px;"></th>
+      <th><img src="{% static 'images/le_herb.png' %}" style = "width:140px; padding-bottom:40px;" ></th>
+      <th><img src="{% static 'images/ecl_herb.png' %}" style = "width:160px;"></th>
+    </thead>
+    {%for kl in LM_records%}
+    <tr>
+      {% with LE_records.all|index:forloop.counter0 as LE %}
+      {% with ECL_records.all|index:forloop.counter0 as ECL %}
+
+      <td class="miejsce">{{forloop.counter|add:2020}}</td>
+      <td class="team_name_gallery">{% if kl.image %}
+    <img src="{{ kl.image.url }}">
+          {% endif %}
+      {{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+      <td class="team_name_gallery">{% if LE.image %}
+    <img src="{{ LE.image.url }}">
+          {% endif %}
+      {{ LE.name}}<a class="country"> {{LE.country}}</a></td>
+      <td class="team_name_gallery">{% if ECL.image %}
+    <img src="{{ ECL.image.url }}">
+          {% endif %}
+      {{ ECL.name}}<a class="country"> {{ECL.country}}</a></td>
+      {% endwith %}
+      {% endwith %}
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
+{% block body_block %}
+{% endblock %}

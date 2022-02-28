@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+{% extends "first_app/index.html" %}
+{% load static %}
+{% load index %}
+{% block body_block2 %}
+
+			<form action="{% url 'puchar_polski' %}" method="post">
+				{% csrf_token %}
+				 <button type="submit" class="przyciski_index" style="margin-left:400px;">Rozegraj sezon</button>
+			</form>
+
+{% endblock %}
+{% block body_block %}
+<h1 class="panel_nazwa" style="margin-top:-1100px;margin-right:130px;">&emsp;&emsp;Puchar Polski &emsp;<img src="{% static 'images/puchar_polski2.png' %}"></h1>
+<div class="container">
+	<h3 class="panel_nazwa">1/32 Finału</h3>
+<ul class="drabinka">
+  <table>
+  {%for kl in pierwsza_runda %}
+    {% if forloop.counter|add:2|divisibleby:2 %}
+    <tr>
+    {%else%}
+    <tr class="separator">
+    {%endif%}
+  	<td>{% if kl.image %}
+  <img src="{{ kl.image.url }}">
+  			{% endif %}
+  	{{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+  	<td class="wynik">{{wyniki_runda_1|index:forloop.counter0 }}</td>
+  </tr>
+  {% endfor %}
+  </table>
+</ul>
+
+<br>
+	<h3 class="panel_nazwa">1/16 Finału</h3>
+<ul class="drabinka">
+  <table>
+  {%for kl in druga_runda %}
+    {% if forloop.counter|add:2|divisibleby:2 %}
+    <tr>
+    {%else%}
+    <tr class="separator">
+    {%endif%}
+  	<td>{% if kl.image %}
+  <img src="{{ kl.image.url }}">
+  			{% endif %}
+  	{{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+  	<td class="wynik">{{wyniki_runda_2|index:forloop.counter0 }}</td>
+  </tr>
+  {% endfor %}
+  </table>
+</ul>
+
+<h3 class="panel_nazwa">1/8 Finału</h3>
+<ul class="drabinka">
+  <table>
+  {%for kl in trzecia_runda %}
+    {% if forloop.counter|add:2|divisibleby:2 %}
+    <tr>
+    {%else%}
+    <tr class="separator">
+    {%endif%}
+  	<td>{% if kl.image %}
+  <img src="{{ kl.image.url }}">
+  			{% endif %}
+  	{{ kl.name}}</td>
+  	<td class="wynik">{{wyniki_runda_3|index:forloop.counter0 }}</td>
+  </tr>
+  {% endfor %}
+  </table>
+</ul>
+
+<h3 class="panel_nazwa">Ćwierćfinał</h3>
+<ul class="drabinka">
+  <table>
+  {%for kl in cwiercfinal %}
+    {% if forloop.counter|add:2|divisibleby:2 %}
+    <tr>
+    {%else%}
+    <tr class="separator">
+    {%endif%}
+  	<td>{% if kl.image %}
+  <img src="{{ kl.image.url }}">
+  			{% endif %}
+  	{{ kl.name}}</td>
+  	<td class="wynik">{{wyniki_cwiercfinal|index:forloop.counter0 }}</td>
+  </tr>
+  {% endfor %}
+  </table>
+</ul>
+
+<h3 class="panel_nazwa">Półfinał</h3>
+<ul class="drabinka">
+  <table>
+  {%for kl in polfinal %}
+    {% if forloop.counter|add:2|divisibleby:2 %}
+    <tr>
+    {%else%}
+    <tr class="separator">
+    {%endif%}
+  	<td>{% if kl.image %}
+  <img src="{{ kl.image.url }}">
+  			{% endif %}
+  	{{ kl.name}}</td>
+  	<td class="wynik">{{wyniki_polfinal|index:forloop.counter0 }}</td>
+  </tr>
+  {% endfor %}
+  </table>
+</ul>
+
+<h3 class="panel_nazwa">Finał</h3>
+<ul class="drabinka">
+  <table>
+  {%for kl in final %}
+    {% if forloop.counter|add:2|divisibleby:2 %}
+    <tr>
+    {%else%}
+    <tr class="separator">
+    {%endif%}
+  	<td>{% if kl.image %}
+  <img src="{{ kl.image.url }}">
+  			{% endif %}
+  	{{ kl.name}}</td>
+  	<td class="wynik">{{wyniki_final|index:forloop.counter0 }}</td>
+  </tr>
+  {% endfor %}
+  </table>
+</ul>
+
+<h2 class="panel_nazwa">{% if winner.0.image %}
+<img src="{{ winner.0.image.url }}">
+    {% endif %}{{winner.0.name}} &emsp; <img src="{% static 'images/puchar_polski3.png' %}"></h2>
+{% endblock %}
+</div>

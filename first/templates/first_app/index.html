@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Django Level two</title>
+		<link rel="stylesheet" href="{% static "css/style21.css" %}"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	</head>
+	<body>
+				<a id="top"></a>
+		<nav class="navbar navbar-default navbar-static-top">
+				<ul class="nav navbar-nav">
+					<li><a href="{% url 'first_app:index' %}">Strona Głowna</a></li>
+					<li><a href="{% url 'first_app:europa' %}">Rozgryki europejskie</a></li>
+				</ul>
+		</nav>
+
+		<div class="back_to_top">
+				<a href="#top" >Do góry&uarr;</a>
+		</div>
+		<div class="sticky_panel">
+			<ul>
+				<li><a href="{% url 'first_app:ekstraklasa' %}"><b>Ekstraklasa</b></a></li>
+				<li><a href="{% url 'first_app:pier_liga' %}"><b>1 Liga</b></a></li>
+				<li><a href="{% url 'first_app:druga_liga' %}"><b>2 Liga</b></a></li>
+				<li><a href="{% url 'first_app:puchar' %}"><b>Puchar Polski</b></a></li>
+				<li><a href="{% url 'first_app:hiszpania' %}"><b>La Liga</b></a></li>
+				<li><a href="{% url 'first_app:anglia' %}"><b>Premier League</b></a></li>
+				<li><a href="{% url 'first_app:niemcy' %}"><b>Bundesliga</b></a></li>
+				<li><a href="{% url 'first_app:wlochy' %}"><b>Serie A</b></a></li>
+				<li><a href="{% url 'first_app:francja' %}"><b>Ligue 1</b></a></li>
+				<li style="margin-top: 20px;"><a href="{% url 'first_app:gallery_europa' %}">Galeria sław Europy</a></li>
+				<li><a href="{% url 'first_app:gallery_polska' %}">Galeria sław Polski</a></li>
+				<li style="margin-top: 20px;"><a href="{% url 'first_app:albania' %}">Albania</a></li>
+				<li><a href="{% url 'first_app:andora' %}">Andora</a></li>
+				<li><a href="{% url 'first_app:armenia' %}">Armenia</a></li>
+				<li><a href="{% url 'first_app:austria' %}">Austria</a></li>
+				<li><a href="{% url 'first_app:azerbejdzan' %}">Azerbejdżan</a></li>
+				<li><a href="{% url 'first_app:belgia' %}">Belgia</a></li>
+				<li><a href="{% url 'first_app:bialorus' %}">Białoruś</a></li>
+				<li><a href="{% url 'first_app:bosnia' %}">Bośnia i Hercegowina</a></li>
+				<li><a href="{% url 'first_app:bulgaria' %}">Bułgaria</a></li>
+				<li><a href="{% url 'first_app:chorwacja' %}">Chorwacja</a></li>
+				<li><a href="{% url 'first_app:cypr' %}">Cypr</a></li>
+				<li><a href="{% url 'first_app:czarnogora' %}">Czarnogóra</a></li>
+				<li><a href="{% url 'first_app:czechy' %}">Czechy</a></li>
+				<li><a href="{% url 'first_app:dania' %}">Dania</a></li>
+				<li><a href="{% url 'first_app:estonia' %}">Estonia</a></li>
+				<li><a href="{% url 'first_app:finlandia' %}">Finlandia</a></li>
+				<li><a href="{% url 'first_app:gibraltar' %}">Gibraltar</a></li>
+				<li><a href="{% url 'first_app:grecja' %}">Grecja</a></li>
+				<li><a href="{% url 'first_app:gruzja' %}">Gruzja</a></li>
+				<li><a href="{% url 'first_app:holandia' %}">Holandia</a></li>
+				<li><a href="{% url 'first_app:irlandia' %}">Irlandia</a></li>
+				<li><a href="{% url 'first_app:irlandia_Pln' %}">Irlandia Północna</a></li>
+				<li><a href="{% url 'first_app:islandia' %}">Islandia</a></li>
+				<li><a href="{% url 'first_app:izrael' %}">Izrael</a></li>
+				<li><a href="{% url 'first_app:kazachstan' %}">Kazachstan</a></li>
+				<li><a href="{% url 'first_app:kosowo' %}">Kosowo</a></li>
+				<li><a href="{% url 'first_app:liechtenstein' %}">Liechtenstein</a></li>
+				<li><a href="{% url 'first_app:litwa' %}">Litwa</a></li>
+				<li><a href="{% url 'first_app:lotwa' %}">Łotwa</a></li>
+				<li><a href="{% url 'first_app:luxembourg' %}">Luxembourg</a></li>
+				<li><a href="{% url 'first_app:macedonia' %}">Macedonia Północna</a></li>
+				<li><a href="{% url 'first_app:malta' %}">Malta</a></li>
+				<li><a href="{% url 'first_app:moldawia' %}">Mołdawia</a></li>
+				<li><a href="{% url 'first_app:norwegia' %}">Norwegia</a></li>
+				<li><a href="{% url 'first_app:portugalia' %}">Portugalia</a></li>
+				<li><a href="{% url 'first_app:rosja' %}">Rosja</a></li>
+				<li><a href="{% url 'first_app:rumunia' %}">Rumunia</a></li>
+				<li><a href="{% url 'first_app:san_Marino' %}">San Marino</a></li>
+				<li><a href="{% url 'first_app:serbia' %}">Serbia</a></li>
+				<li><a href="{% url 'first_app:slowacja' %}">Słowacja</a></li>
+				<li><a href="{% url 'first_app:slowenia' %}">Słowenia</a></li>
+				<li><a href="{% url 'first_app:szkocja' %}">Szkocja</a></li>
+				<li><a href="{% url 'first_app:szwajcaria' %}">Szwajcaria</a></li>
+				<li><a href="{% url 'first_app:szwecja' %}">Szwecja</a></li>
+				<li><a href="{% url 'first_app:turcja' %}">Turcja</a></li>
+				<li><a href="{% url 'first_app:ukraina' %}">Ukraina</a></li>
+				<li><a href="{% url 'first_app:walia' %}">Walia</a></li>
+				<li><a href="{% url 'first_app:wegry' %}">Węgry</a></li>
+				<li><a href="{% url 'first_app:wyspy_Owcze' %}">Wyspy Owcze</a></li>
+			</ul>
+		</div>
+
+		<div class="panel_przyciski">
+			{% block body_block2 %}
+						<ul style="list-style-type:none;columns:3;margin-top:50px;">
+	<li><form action="{% url 'index_season' %}" method="post">
+			{% csrf_token %}
+			 <button type="submit" class="przyciski_index">Rozegraj sezon we wszystkich ligach</button>
+		</form></li>
+	<li>	<form action="{% url 'index_clean' %}" method="post">
+			{% csrf_token %}
+			 <button type="submit" class="przyciski_index">Wyczyść punkty we wszystkich ligach</button>
+		</form></li>
+	<li>	<form action="{% url 'spadek' %}" method="post">
+			{% csrf_token %}
+			 <button type="submit" class="przyciski_index">Uwzględnij spadek</button>
+		</form></li>
+	</ul>
+		{% endblock %}
+		</div>
+
+	<div class="container">
+		{% if ekst_records %}
+			<h3 class="panel_nazwa">Ekstraklasa &emsp;&emsp;<img src="{% static 'images/ekstr.png' %}"></h3>
+			<table class="ekstraklasa">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in ekst_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if pier_liga_records %}
+		<h3 class="panel_nazwa">Fortuna 1 Liga&emsp;&emsp;<img src="{% static 'images/pliga.png' %}"></h3>
+			<table class="pierwsza_liga">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in pier_liga_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if drug_liga_records %}
+		<h3 class="panel_nazwa">eWinner 2 Liga&emsp;<img src="{% static 'images/druga_liga.png' %}"></h3>
+			<table class="pierwsza_liga">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in drug_liga_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if hiszpania_records %}
+		<h3 class="panel_nazwa">La Liga&emsp;<img src="{% static 'images/hiszpania.png' %}"></h3>
+			<table class="ligi_1_4">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in hiszpania_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if anglia_records %}
+		<h3 class="panel_nazwa">Premier League&emsp;<img src="{% static 'images/anglia.png' %}"></h3>
+			<table class="ligi_1_4">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in anglia_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if niemcy_records %}
+		<h3 class="panel_nazwa">Bundesliga&emsp;<img src="{% static 'images/niemcy.png' %}"></h3>
+			<table class="ligi_1_4">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in niemcy_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if wlochy_records %}
+		<h3 class="panel_nazwa">Serie A&emsp;<img src="{% static 'images/wlochy.png' %}"></h3>
+			<table class="ligi_1_4">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in wlochy_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if francja_records %}
+		<h3 class="panel_nazwa">Ligue 1&emsp;<img src="{% static 'images/francja.png' %}"></h3>
+			<table class="francja">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in francja_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if portugalia_records %}
+		<h3 class="panel_nazwa">Primeira Liga &emsp;<img src="{% static 'images/portugalia.png' %}"></h3>
+			<table class="portugalia">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in portugalia_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if rosja_records %}
+		<h3 class="panel_nazwa">Priemjer-Liga &emsp;<img src="{% static 'images/rosja.png' %}"></h3>
+			<table class="ligi_7_10">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in rosja_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if belgia_records %}
+		<h3 class="panel_nazwa">Jupiler League &emsp;<img src="{% static 'images/belgia.png' %}"></h3>
+			<table class="ligi_7_10">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in belgia_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if ukraina_records %}
+		<h3 class="panel_nazwa">Premier-liha &emsp;<img src="{% static 'images/ukraina.png' %}"></h3>
+			<table class="ligi_7_10">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in ukraina_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if holandia_records %}
+		<h3 class="panel_nazwa">Eredivisie &emsp;<img src="{% static 'images/holandia.png' %}"></h3>
+			<table class="ligi_7_10">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in holandia_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if turcja_records %}
+		<h3 class="panel_nazwa">Super Lig &emsp;<img src="{% static 'images/turcja.png' %}"></h3>
+			<table class="ligi_11_15">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in turcja_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if austria_records %}
+		<h3 class="panel_nazwa">Tipico Bundesliga &emsp;<img src="{% static 'images/austria.png' %}"></h3>
+			<table class="ligi_11_15">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in austria_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if dania_records %}
+		<h3 class="panel_nazwa">Superliga &emsp;<img src="{% static 'images/dania.png' %}"></h3>
+			<table class="ligi_11_15">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in dania_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if szkocja_records %}
+		<h3 class="panel_nazwa">Premiership &emsp;<img src="{% static 'images/szkocja.png' %}"></h3>
+			<table class="ligi_11_15">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in szkocja_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if czechy_records %}
+		<h3 class="panel_nazwa">1.česká fotbalová liga &emsp;<img src="{% static 'images/czechy.png' %}"></h3>
+			<table class="ligi_11_15">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in czechy_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if cypr_records %}
+		<h3 class="panel_nazwa">Protathlima A’Kategorias &emsp;<img src="{% static 'images/cypr.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in cypr_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if szwajcaria_records %}
+		<h3 class="panel_nazwa">Swiss Super League &emsp;<img src="{% static 'images/szwajcaria.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in szwajcaria_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if grecja_records %}
+		<h3 class="panel_nazwa">Superleague Ellada &emsp;<img src="{% static 'images/grecja.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in grecja_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if serbia_records %}
+		<h3 class="panel_nazwa">Super liga Srbije &emsp;<img src="{% static 'images/serbia.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in serbia_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if chorwacja_records %}
+		<h3 class="panel_nazwa">1.HNL &emsp;<img src="{% static 'images/chorwacja.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in chorwacja_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if szwecja_records %}
+		<h3 class="panel_nazwa">Allsvenskan &emsp;<img src="{% static 'images/szwecja.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in szwecja_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if norwegia_records %}
+		<h3 class="panel_nazwa">Eliteserien &emsp;<img src="{% static 'images/norwegia.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in norwegia_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if izrael_records %}
+		<h3 class="panel_nazwa">Liga ha'Al &emsp;<img src="{% static 'images/izrael.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in izrael_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if kazachstan_records %}
+		<h3 class="panel_nazwa">Priemjer Ligasy &emsp;<img src="{% static 'images/kazachstan.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in kazachstan_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if bialorus_records %}
+		<h3 class="panel_nazwa">Wyszejszaja Liha &emsp;<img src="{% static 'images/bialorus.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in bialorus_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if azerbejdzan_records %}
+		<h3 class="panel_nazwa">Premyer Liqa &emsp;<img src="{% static 'images/azerbejdzan.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in azerbejdzan_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if bulgaria_records %}
+		<h3 class="panel_nazwa">Parva Liga &emsp;<img src="{% static 'images/bulgaria.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in bulgaria_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if rumunia_records %}
+		<h3 class="panel_nazwa">Liga 1 &emsp;<img src="{% static 'images/rumunia.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in rumunia_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if slowacja_records %}
+		<h3 class="panel_nazwa">Fortuna liga &emsp;<img src="{% static 'images/slowacja.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in slowacja_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if slowenia_records %}
+		<h3 class="panel_nazwa">Prva Liga &emsp;<img src="{% static 'images/slowenia.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in slowenia_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if wegry_records %}
+		<h3 class="panel_nazwa">OTP Bank Liga &emsp;<img src="{% static 'images/wegry.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in wegry_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if luxembourg_records %}
+		<h3 class="panel_nazwa">Nationaldivisioun &emsp;<img src="{% static 'images/luxembourg.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in luxembourg_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if litwa_records %}
+		<h3 class="panel_nazwa">A Lyga&emsp;<img src="{% static 'images/litwa.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in litwa_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if armenia_records %}
+		<h3 class="panel_nazwa">Barcragujn chumb&emsp;<img src="{% static 'images/armenia.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in armenia_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if lotwa_records %}
+		<h3 class="panel_nazwa">Optibet Virsliga &emsp;<img src="{% static 'images/lotwa.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in lotwa_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if albania_records %}
+		<h3 class="panel_nazwa">Kategoria Superiore &emsp;<img src="{% static 'images/albania.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in albania_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if macedonia_records %}
+		<h3 class="panel_nazwa">1.MFL &emsp;<img src="{% static 'images/macedonia.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in macedonia_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if bosnia_records %}
+		<h3 class="panel_nazwa">Premijer liga Bosne i Hercegovine&emsp;<img src="{% static 'images/bosnia.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in bosnia_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if moldawia_records %}
+		<h3 class="panel_nazwa">Divizia Națională &emsp;<img src="{% static 'images/moldawia.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in moldawia_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if irlandia_records %}
+		<h3 class="panel_nazwa">Premier Division&emsp;<img src="{% static 'images/irlandia.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in irlandia_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if finlandia_records %}
+		<h3 class="panel_nazwa">Veikkausliiga &emsp;<img src="{% static 'images/finlandia.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in finlandia_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if gruzja_records %}
+		<h3 class="panel_nazwa">Erownuli Liga &emsp;<img src="{% static 'images/gruzja.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in gruzja_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if malta_records %}
+		<h3 class="panel_nazwa">Maltese Premier League &emsp;<img src="{% static 'images/malta.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in malta_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if islandia_records %}
+		<h3 class="panel_nazwa">Úrvalsdeild &emsp;<img src="{% static 'images/islandia.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in islandia_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if walia_records %}
+		<h3 class="panel_nazwa">Cymru Premier &emsp;<img src="{% static 'images/walia.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in walia_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if irlandia_Pln_records %}
+		<h3 class="panel_nazwa">NIFL Premiership &emsp;<img src="{% static 'images/irlandia_pln.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in irlandia_Pln_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if gibraltar_records %}
+		<h3 class="panel_nazwa">Gibraltar National League &emsp;<img src="{% static 'images/gibraltar.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in gibraltar_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if czarnogora_records %}
+		<h3 class="panel_nazwa">Prva crnogorska fudbalska liga &emsp;<img src="{% static 'images/czarnogora.png' %}"></h3>
+			<table class="ligi_16_50">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in czarnogora_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if estonia_records %}
+		<h3 class="panel_nazwa">Meistriliiga &emsp;<img src="{% static 'images/estonia.png' %}"></h3>
+			<table class="estonia">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in estonia_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if kosowo_records %}
+		<h3 class="panel_nazwa">Superliga e Kosovës &emsp;<img src="{% static 'images/kosowo.png' %}"></h3>
+			<table class="kosowo">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in kosowo_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if wyspy_Owcze_records %}
+		<h3 class="panel_nazwa">Premier League &emsp;<img src="{% static 'images/wyspy_owcze.png' %}"></h3>
+			<table class="wyspy_owcze">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in wyspy_Owcze_records%}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if andora_records %}
+		<h3 class="panel_nazwa">Primera Divisió &emsp;<img src="{% static 'images/andora.png' %}"></h3>
+			<table class="andora">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in andora_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+		{% if san_Marino_records %}
+		<h3 class="panel_nazwa">Campionato Sammarinese &emsp;<img src="{% static 'images/san_marino.png' %}"></h3>
+			<table class="estonia">
+				<thead>
+					<th></th>
+					<th>Nazwa</th>
+					<th>Pkt</th>
+					<th>Bramki</th>
+					<th>Mecze</th>
+				</thead>
+				{%for kl in san_Marino_records %}
+				<tr>
+					<td class="miejsce">{{forloop.counter}}</td>
+					<td class="team_name">{% if kl.image %}
+				<img src="{{ kl.image.url }}">
+							{% endif %}
+					{{ kl.name}}({{ kl.strength }})</td>
+					<td class="pkt">{{ kl.points }}</td>
+					<td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+					<td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+		<br><br><br>
+
+	</div>
+		<div>
+			{% block body_block %}
+
+			{% endblock %}
+		</div>
+	</body>
+</html>

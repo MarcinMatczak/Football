@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+{% include 'first_app/europa.html' %}
+{% load static %}
+{% block body_block2 %}
+
+{% endblock %}
+
+{% block body_block %}
+<div class="container" style="margin-top:-900px;margin-right:330px;">
+<h1 class="panel_nazwa" style="margin-top: -50px;margin-right:-20px;"><img src="{% static 'images/lm_herb.png' %}"></h1>
+  {% if LM_A_records %}
+    <h3 class="panel_nazwa">Grupa A</h3>
+      <table class="grupa_LM">
+        <thead>
+          <th></th>
+          <th>Nazwa</th>
+          <th>Pkt</th>
+          <th>Bramki</th>
+          <th>Mecze</th>
+        </thead>
+        {%for kl in LM_A_records%}
+        <tr>
+          <td class="miejsce">{{forloop.counter}}</td>
+          <td class="team_name">{% if kl.image %}
+        <img src="{{ kl.image.url }}">
+              {% endif %}
+          {{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+          <td class="pkt">{{ kl.points }}</td>
+          <td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+          <td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+  {% endif %}
+  {% if LM_B_records %}
+    <h3 class="panel_nazwa">Grupa B</h3>
+      <table class="grupa_LM">
+        <thead>
+          <th></th>
+          <th>Nazwa</th>
+          <th>Pkt</th>
+          <th>Bramki</th>
+          <th>Mecze</th>
+        </thead>
+        {%for kl in LM_B_records%}
+        <tr>
+          <td class="miejsce">{{forloop.counter}}</td>
+          <td class="team_name">{% if kl.image %}
+        <img src="{{ kl.image.url }}">
+              {% endif %}
+          {{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+          <td class="pkt">{{ kl.points }}</td>
+          <td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+          <td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+  {% endif %}
+  {% if LM_C_records %}
+    <h3 class="panel_nazwa">Grupa C</h3>
+      <table class="grupa_LM">
+        <thead>
+          <th></th>
+          <th>Nazwa</th>
+          <th>Pkt</th>
+          <th>Bramki</th>
+          <th>Mecze</th>
+        </thead>
+        {%for kl in LM_C_records%}
+        <tr>
+          <td class="miejsce">{{forloop.counter}}</td>
+          <td class="team_name">{% if kl.image %}
+        <img src="{{ kl.image.url }}">
+              {% endif %}
+          {{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+          <td class="pkt">{{ kl.points }}</td>
+          <td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+          <td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+  {% endif %}
+  {% if LM_D_records %}
+    <h3 class="panel_nazwa">Grupa D</h3>
+      <table class="grupa_LM">
+        <thead>
+          <th></th>
+          <th>Nazwa</th>
+          <th>Pkt</th>
+          <th>Bramki</th>
+          <th>Mecze</th>
+        </thead>
+        {%for kl in LM_D_records%}
+        <tr>
+          <td class="miejsce">{{forloop.counter}}</td>
+          <td class="team_name">{% if kl.image %}
+        <img src="{{ kl.image.url }}">
+              {% endif %}
+          {{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+          <td class="pkt">{{ kl.points }}</td>
+          <td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+          <td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+  {% endif %}
+  {% if LM_E_records %}
+    <h3 class="panel_nazwa">Grupa E</h3>
+      <table class="grupa_LM">
+        <thead>
+          <th></th>
+          <th>Nazwa</th>
+          <th>Pkt</th>
+          <th>Bramki</th>
+          <th>Mecze</th>
+        </thead>
+        {%for kl in LM_E_records%}
+        <tr>
+          <td class="miejsce">{{forloop.counter}}</td>
+          <td class="team_name">{% if kl.image %}
+        <img src="{{ kl.image.url }}">
+              {% endif %}
+          {{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+          <td class="pkt">{{ kl.points }}</td>
+          <td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+          <td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+  {% endif %}
+  {% if LM_F_records %}
+    <h3 class="panel_nazwa">Grupa F</h3>
+      <table class="grupa_LM">
+        <thead>
+          <th></th>
+          <th>Nazwa</th>
+          <th>Pkt</th>
+          <th>Bramki</th>
+          <th>Mecze</th>
+        </thead>
+        {%for kl in LM_F_records%}
+        <tr>
+          <td class="miejsce">{{forloop.counter}}</td>
+          <td class="team_name">{% if kl.image %}
+        <img src="{{ kl.image.url }}">
+              {% endif %}
+          {{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+          <td class="pkt">{{ kl.points }}</td>
+          <td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+          <td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+  {% endif %}
+  {% if LM_G_records %}
+    <h3 class="panel_nazwa">Grupa G</h3>
+      <table class="grupa_LM">
+        <thead>
+          <th></th>
+          <th>Nazwa</th>
+          <th>Pkt</th>
+          <th>Bramki</th>
+          <th>Mecze</th>
+        </thead>
+        {%for kl in LM_G_records%}
+        <tr>
+          <td class="miejsce">{{forloop.counter}}</td>
+          <td class="team_name">{% if kl.image %}
+        <img src="{{ kl.image.url }}">
+              {% endif %}
+          {{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+          <td class="pkt">{{ kl.points }}</td>
+          <td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+          <td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+  {% endif %}
+  {% if LM_H_records %}
+    <h3 class="panel_nazwa">Grupa H</h3>
+      <table class="grupa_LM">
+        <thead>
+          <th></th>
+          <th>Nazwa</th>
+          <th>Pkt</th>
+          <th>Bramki</th>
+          <th>Mecze</th>
+        </thead>
+        {%for kl in LM_H_records%}
+        <tr>
+          <td class="miejsce">{{forloop.counter}}</td>
+          <td class="team_name">{% if kl.image %}
+        <img src="{{ kl.image.url }}">
+              {% endif %}
+          {{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+          <td class="pkt">{{ kl.points }}</td>
+          <td class= "bramki">{{ kl.scored }} - {{ kl.conceded }}</td>
+          <td class="mecze">{{ kl.wins }} - {{ kl.draws }} - {{ kl.loses }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+  {% endif %}
+  <br><br><br>
+
+  <h3 class="panel_nazwa">1/8 finału</h3>
+<ul class="drabinka">
+  <table>
+  {%for kl in LM_1_8_records %}
+    {% if forloop.counter|add:2|divisibleby:2 %}
+    <tr>
+    {%else%}
+    <tr class="separator">
+    {%endif%}
+    <td>{% if kl.image %}
+  <img src="{{ kl.image.url }}">
+        {% endif %}
+        {{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+        <td class="wynik_pierwszego_meczu">{{kl.last_scored }}</td>
+        <td class="wynik">{{kl.last_scored_2 }}</td>
+  </tr>
+  {% endfor %}
+  </table>
+</ul>
+<h3 class="panel_nazwa">Ćwierćfinał</h3>
+  <ul class="drabinka">
+    <table>
+    {%for kl in LM_cwiercfinal_records %}
+      {% if forloop.counter|add:2|divisibleby:2 %}
+      <tr>
+      {%else%}
+      <tr class="separator">
+      {%endif%}
+      <td>{% if kl.image %}
+    <img src="{{ kl.image.url }}">
+          {% endif %}
+      {{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+          <td class="wynik_pierwszego_meczu">{{kl.last_scored }}</td>
+          <td class="wynik">{{kl.last_scored_2 }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+  </ul>
+<h3 class="panel_nazwa">Półfinał</h3>
+  <ul class="drabinka">
+    <table>
+    {%for kl in LM_polfinal_records %}
+      {% if forloop.counter|add:2|divisibleby:2 %}
+      <tr>
+      {%else%}
+      <tr class="separator">
+      {%endif%}
+      <td>{% if kl.image %}
+    <img src="{{ kl.image.url }}">
+          {% endif %}
+      {{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+          <td class="wynik_pierwszego_meczu">{{kl.last_scored }}</td>
+          <td class="wynik">{{kl.last_scored_2 }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+  </ul>
+  <h3 class="panel_nazwa">Finał</h3>
+  <ul class="drabinka">
+    <table>
+    {%for kl in LM_final_records %}
+      {% if forloop.counter|add:2|divisibleby:2 %}
+      <tr>
+      {%else%}
+      <tr class="separator">
+      {%endif%}
+    	<td>{% if kl.image %}
+    <img src="{{ kl.image.url }}">
+    			{% endif %}
+    	{{ kl.name}}<a class="country"> {{kl.country}}</a></td>
+      <td class="wynik">{{kl.last_scored }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+  </ul>
+
+  <h2 class="panel_nazwa">{% if LM_winner_records.0.image %}
+  <img src="{{ LM_winner_records.0.image.url }}">
+      {% endif %}{{LM_winner_records.0.name}} &emsp; <img src="{% static 'images/lm_puchar.png' %}"></h2>
+</div>
+{% endblock %}

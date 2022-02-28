@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends "first_app/index.html" %}
+{% load static %}
+
+
+{% block body_block2 %}
+<div class="panel_przyciski" style="width:1000px;">
+  <ul style="list-style-type:none;columns:3;margin-left:-250px;margin-top:50px;">
+<li><form action="{% url 'eliminacje_season' %}" method="post" style="height:60px;margin-top:25px;">
+  {% csrf_token %}
+   <button type="submit" class="przyciski_europa">Rozegraj eliminacje</button>
+</form></li>
+    <li><form action="{% url 'europa_season' %}" method="post" style="height:60px;">
+      {% csrf_token %}
+       <button type="submit" class="przyciski_europa">Rozegraj Puchary</button>
+    </form></li>
+    <li>
+         <a class="przyciski_europa" style="border: 2px solid blue; float:left;padding-top: 10px;" href="{% url 'first_app:eliminacje_LM' %}">eliminacje LM</a>
+    </li>
+    <li>
+        <a class="przyciski_europa" style="border: 2px solid #ff8000; float:left;padding-top: 10px;" href="{% url 'first_app:eliminacje_LE' %}">eliminacje LE</a>
+    </li>
+    <li>
+        <a class="przyciski_europa" style="border: 2px solid #00b300; float:left;padding-top: 10px;" href="{% url 'first_app:eliminacje_ECL' %}">eliminacje ECL</a>
+    </li>
+    <li>
+        <a class="przyciski_europa" style="border: 2px solid blue; float:left;padding-top: 10px;" href="{% url 'first_app:LM' %}">Liga Mistrzów</a>
+     </li>
+    <li>
+        <a class="przyciski_europa" style="border: 2px solid #ff8000; float:left;padding-top: 10px;" href="{% url 'first_app:LE' %}">Liga Europy</a>
+    </li>
+    <li>
+        <a class="przyciski_europa" style="border: 2px solid #00b300; float:left;padding-top: 10px;" href="{% url 'first_app:ECL' %}">Europa Conference League</a>
+    </li>
+  </ul>
+
+
+</div>
+{% endblock %}
+
+{% block body_block %}
+
+
+
+{% endblock %}

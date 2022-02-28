@@ -1,0 +1,4 @@
+t.append(LE_polfinal.objects.get_or_create(name = LE_polfinal_list[0].name,image = LE_polfinal_list[0].image,country = LE_polfinal_list[0].country)[0])
+t.append(LE_polfinal.objects.get_or_create(name = LE_polfinal_list[1].name,image = LE_polfinal_list[1].image,country = LE_polfinal_list[1].country)[0])
+t.append(LE_polfinal.objects.get_or_create(name = LE_polfinal_list[2].name,image = LE_polfinal_list[2].image,country = LE_polfinal_list[2].country)[0])
+t.append(LE_polfinal.objects.get_or_create(name = LE_polfinal_list[3].name,image = LE_polfinal_list[3].image,country = LE_polfinal_list[3].country)[0])

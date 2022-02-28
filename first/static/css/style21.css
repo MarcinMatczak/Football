@@ -1,0 +1,427 @@
+.sticky_panel{
+  width: 160px;
+  background-color:  #EfEfEf;
+  float:left;
+  top: 0;
+  margin-top: -20px;
+}
+.sticky_panel ul{
+    list-style-type:none;
+    margin-left: -18px;
+    font-size: 14px;
+}
+.back_to_top{
+  height:30px;
+  background-color:  #EfEfEf;
+  position: fixed;
+  top: 0;
+  margin-top: 910px;
+  margin-left: 1360px;
+}
+.przyciski_index{
+  height:45px;
+  width:200px;
+  float: left;
+}
+.przyciski_europa{
+  height:45px;
+  width:200px;
+  margin-left: 200px;
+  margin-top: 5px;
+  text-align:center;
+  font-size: 15px;
+  color: black;
+}
+.przyciski_europa:hover{
+  text-decoration: none;
+}
+table,th,td{
+  border: 0px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+thead th{
+  text-align: center;
+}
+.container{
+  background-color: white;
+  margin-left: 10px;
+}
+.panel_przyciski{
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.panel_nazwa{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 35px;
+}
+.miejsce{
+  width: 22px;
+  font-size: 16px;
+  text-align: center;
+}
+.team_name{
+  width: 280px;
+}
+.team_name_gallery{
+  width: 320px;
+}
+.gallery_table td{
+    border: 0px solid black;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 22px;
+}
+.gallery_rok td{
+  width: 22px;
+  font-size: 16px;
+  text-align: center;
+}
+.pkt{
+  width: 50px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+.bramki{
+  width: 70px;
+  font-size: 14px;
+  text-align: center;
+}
+.mecze{
+  width: 100px;
+  font-size: 14px;
+  text-align: center;
+}
+.drabinka{
+  width:50%;
+  list-style-type:none;
+  columns:2;
+  width:1100px;
+}
+.separator{
+  border-top: 12px solid transparent;
+  width:400px;
+}
+.country{
+  font-size:10px;
+  color:black;
+}
+.country:hover{
+  text-decoration: none;
+  color:black;
+}
+
+.wynik_pierwszego_meczu{
+  font-size: 20px;
+  padding: 5px;
+  width: 40px;
+}
+.wynik{
+  font-size: 20px;
+  padding: 5px;
+  width: 80px;
+}
+.ekstraklasa td{
+    border: 1px solid black;
+}
+
+
+.ekstraklasa tr:nth-of-type(1) td:nth-of-type(1)
+{
+	background-color: blue;
+  color:white;
+}
+.ekstraklasa tr:nth-of-type(2) td:nth-of-type(1)
+{
+	background-color: #e6e600;
+  color:white;
+}
+.ekstraklasa tr:nth-of-type(3) td:nth-of-type(1),.ekstraklasa tr:nth-of-type(4) td:nth-of-type(1),.ekstraklasa tr:nth-of-type(5) td:nth-of-type(1)
+{
+	background-color: #00b300;
+  color:white;
+}
+.ekstraklasa tr:nth-of-type(14) td:nth-of-type(1),.ekstraklasa tr:nth-of-type(15) td:nth-of-type(1),.ekstraklasa tr:nth-of-type(16) td:nth-of-type(1)
+{
+	background-color: red;
+  color:white;
+}
+
+.pierwsza_liga td{
+    border: 1px solid black;
+}
+.pierwsza_liga tr:nth-of-type(1) td:nth-of-type(1),.pierwsza_liga tr:nth-of-type(2) td:nth-of-type(1),.pierwsza_liga tr:nth-of-type(3) td:nth-of-type(1)
+{
+	background-color: yellow;
+}
+.pierwsza_liga tr:nth-of-type(18) td:nth-of-type(1),.pierwsza_liga tr:nth-of-type(17) td:nth-of-type(1),.pierwsza_liga tr:nth-of-type(16) td:nth-of-type(1)
+{
+	background-color: red;
+  color:white;
+}
+
+.ligi_1_4 td{
+    border: 1px solid black;
+}
+.ligi_1_4 tr:nth-of-type(1) td:nth-of-type(1),.ligi_1_4 tr:nth-of-type(2) td:nth-of-type(1),.ligi_1_4 tr:nth-of-type(3) td:nth-of-type(1),.ligi_1_4 tr:nth-of-type(4) td:nth-of-type(1)
+{
+	background-color: blue;
+  color:white;
+}
+.ligi_1_4 tr:nth-of-type(5) td:nth-of-type(1),.ligi_1_4 tr:nth-of-type(6) td:nth-of-type(1)
+{
+	background-color: #ff8000;
+  color:white;
+}
+.ligi_1_4 tr:nth-of-type(7) td:nth-of-type(1)
+{
+	background-color: #00b300;
+  color:white;
+}
+.ligi_1_4 tr:nth-last-of-type(1) td:nth-of-type(1),.ligi_1_4 tr:nth-last-of-type(2) td:nth-of-type(1),.ligi_1_4 tr:nth-last-of-type(3) td:nth-of-type(1)
+{
+	background-color: red;
+  color:white;
+}
+
+.francja td{
+    border: 1px solid black;
+}
+.francja tr:nth-of-type(1) td:nth-of-type(1),.francja tr:nth-of-type(2) td:nth-of-type(1)
+{
+	background-color: blue;
+  color:white;
+}
+.francja tr:nth-of-type(3) td:nth-of-type(1)
+{
+	background-color: #e6e600;
+  color:white;
+}
+.francja tr:nth-of-type(4) td:nth-of-type(1),.francja tr:nth-of-type(5) td:nth-of-type(1)
+{
+	background-color: #ff8000;
+  color:white;
+}
+.francja tr:nth-of-type(6) td:nth-of-type(1)
+{
+	background-color: #00b300;
+  color:white;
+}
+.francja tr:nth-last-of-type(1) td:nth-of-type(1),.francja tr:nth-last-of-type(2) td:nth-of-type(1),.francja tr:nth-last-of-type(3) td:nth-of-type(1)
+{
+	background-color: red;
+  color:white;
+}
+
+.portugalia td{
+    border: 1px solid black;
+}
+.portugalia tr:nth-of-type(1) td:nth-of-type(1),.portugalia tr:nth-of-type(2) td:nth-of-type(1)
+{
+	background-color: blue;
+  color:white;
+}
+.portugalia tr:nth-of-type(3) td:nth-of-type(1)
+{
+	background-color: #e6e600;
+  color:white;
+}
+.portugalia tr:nth-of-type(4) td:nth-of-type(1)
+{
+	background-color: #ff8000;
+  color:white;
+}
+.portugalia tr:nth-of-type(5) td:nth-of-type(1),.portugalia tr:nth-of-type(6) td:nth-of-type(1)
+{
+	background-color: #00b300;
+  color:white;
+}
+.portugalia tr:nth-last-of-type(1) td:nth-of-type(1),.portugalia tr:nth-last-of-type(2) td:nth-of-type(1)
+{
+	background-color: red;
+  color:white;
+}
+
+.ligi_7_10 td{
+    border: 1px solid black;
+}
+.ligi_7_10 tr:nth-of-type(1) td:nth-of-type(1)
+{
+	background-color: blue;
+  color:white;
+}
+.ligi_7_10 tr:nth-of-type(2) td:nth-of-type(1)
+{
+	background-color: #e6e600;
+  color:white;
+}
+.ligi_7_10 tr:nth-of-type(3) td:nth-of-type(1)
+{
+	background-color: #994d00;
+  color:white;
+}
+.ligi_7_10 tr:nth-of-type(4) td:nth-of-type(1),.ligi_7_10 tr:nth-of-type(5) td:nth-of-type(1)
+{
+	background-color: #00b300;
+  color:white;
+}
+.ligi_7_10 tr:nth-last-of-type(1) td:nth-of-type(1),.ligi_7_10 tr:nth-last-of-type(2) td:nth-of-type(1)
+{
+	background-color: red;
+  color:white;
+}
+
+
+.ligi_11_15 td{
+    border: 1px solid black;
+}
+.ligi_11_15 tr:nth-of-type(1) td:nth-of-type(1),.ligi_11_15 tr:nth-of-type(2) td:nth-of-type(1)
+{
+	background-color: #e6e600;
+  color:white;
+}
+.ligi_11_15 tr:nth-of-type(3) td:nth-of-type(1)
+{
+	background-color: #994d00;
+  color:white;
+}
+.ligi_11_15 tr:nth-of-type(4) td:nth-of-type(1),.ligi_11_15 tr:nth-of-type(5) td:nth-of-type(1)
+{
+	background-color: #00b300;
+  color:white;
+}
+.ligi_11_15 tr:nth-last-of-type(1) td:nth-of-type(1),.ligi_11_15 tr:nth-last-of-type(2) td:nth-of-type(1)
+{
+	background-color: red;
+  color:white;
+}
+
+
+.ligi_16_50 td{
+    border: 1px solid black;
+}
+.ligi_16_50 tr:nth-of-type(1) td:nth-of-type(1)
+{
+	background-color: #e6e600;
+  color:white;
+}
+.ligi_16_50 tr:nth-of-type(2) td:nth-of-type(1),.ligi_16_50 tr:nth-of-type(3) td:nth-of-type(1),.ligi_16_50 tr:nth-of-type(4) td:nth-of-type(1)
+{
+	background-color: #00b300;
+  color:white;
+}
+.ligi_16_50 tr:nth-last-of-type(1) td:nth-of-type(1),.ligi_16_50 tr:nth-last-of-type(2) td:nth-of-type(1)
+{
+	background-color: red;
+  color:white;
+}
+
+.estonia td{
+    border: 1px solid black;
+}
+.estonia tr:nth-of-type(1) td:nth-of-type(1)
+{
+	background-color: #e6e600;
+  color:white;
+}
+.estonia tr:nth-of-type(2) td:nth-of-type(1),.estonia tr:nth-of-type(3) td:nth-of-type(1)
+{
+	background-color: #00b300;
+  color:white;
+}
+.estonia tr:nth-last-of-type(1) td:nth-of-type(1),.estonia tr:nth-last-of-type(2) td:nth-of-type(1)
+{
+	background-color: red;
+  color:white;
+}
+
+.kosowo td{
+    border: 1px solid black;
+}
+.kosowo tr:nth-of-type(1) td:nth-of-type(1),.kosowo tr:nth-of-type(2) td:nth-of-type(1),.kosowo tr:nth-of-type(3) td:nth-of-type(1)
+{
+	background-color: #00b300;
+  color:white;
+}
+.kosowo tr:nth-last-of-type(1) td:nth-of-type(1),.kosowo tr:nth-last-of-type(2) td:nth-of-type(1)
+{
+	background-color: red;
+  color:white;
+}
+
+.wyspy_owcze td{
+    border: 1px solid black;
+}
+.wyspy_owcze tr:nth-of-type(1) td:nth-of-type(1)
+{
+	background-color: blue;
+  color:white;
+}
+.wyspy_owcze tr:nth-of-type(2) td:nth-of-type(1),.wyspy_owcze tr:nth-of-type(3) td:nth-of-type(1),.wyspy_owcze tr:nth-of-type(4) td:nth-of-type(1)
+{
+	background-color: #00b300;
+  color:white;
+}
+.wyspy_owcze tr:nth-last-of-type(1) td:nth-of-type(1),.wyspy_owcze tr:nth-last-of-type(2) td:nth-of-type(1)
+{
+	background-color: red;
+  color:white;
+}
+
+.andora td{
+    border: 1px solid black;
+}
+.andora tr:nth-of-type(1) td:nth-of-type(1)
+{
+	background-color: #ff8000;
+  color:white;
+}
+.andora tr:nth-of-type(2) td:nth-of-type(1),.andora tr:nth-of-type(3) td:nth-of-type(1),.andora tr:nth-of-type(4) td:nth-of-type(1)
+{
+	background-color: #00b300;
+  color:white;
+}
+.andora tr:nth-last-of-type(1) td:nth-of-type(1),.andora tr:nth-last-of-type(2) td:nth-of-type(1)
+{
+	background-color: red;
+  color:white;
+}
+
+.grupa_LM td{
+    border: 1px solid black;
+}
+.grupa_LM tr:nth-of-type(1) td:nth-of-type(1),.grupa_LM tr:nth-of-type(2) td:nth-of-type(1)
+{
+	background-color: blue;
+  color:white;
+}
+.grupa_LM tr:nth-of-type(3) td:nth-of-type(1)
+{
+	background-color: #ff8000;
+  color:white;
+}
+.grupa_LE td{
+    border: 1px solid black;
+}
+.grupa_LE tr:nth-of-type(1) td:nth-of-type(1),.grupa_LE tr:nth-of-type(2) td:nth-of-type(1)
+{
+	background-color: #ff8000;
+  color:white;
+}
+.grupa_LE tr:nth-of-type(3) td:nth-of-type(1)
+{
+	background-color: #00b300;
+  color:white;
+}
+.grupa_ECL td{
+    border: 1px solid black;
+}
+.grupa_ECL tr:nth-of-type(1) td:nth-of-type(1),.grupa_ECL tr:nth-of-type(2) td:nth-of-type(1)
+{
+	background-color: #00b300;
+  color:white;
+}

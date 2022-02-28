@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends "first_app/index.html" %}
+{% load static %}
+{% load index %}
+{% block body_block2 %}
+  <table class="gallery_table">
+    <thead>
+      <th></th>
+      <th><img src="{% static 'images/mistrz_polski.png' %}" style = "height:150px;"></th>
+      <th><img src="{% static 'images/puchar_polski3.png' %}" style = "height:150px;"></th>
+    </thead>
+    {%for kl in POL_records%}
+    <tr>
+      {% with PP_records.all|index:forloop.counter0 as PP %}
+
+      <td class="miejsce">{{forloop.counter|add:2020}}</td>
+      <td class="team_name_gallery">{% if kl.image %}
+    <img src="{{ kl.image.url }}">
+          {% endif %}
+      {{ kl.name}}</td>
+      {%if PP%}
+      <td class="team_name_gallery">{% if PP.image %}
+    <img src="{{ PP.image.url }}">
+          {% endif %}
+      {{ PP.name}}</td>
+      {%endif%}
+      {% endwith %}
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
+{% block body_block %}
+{% endblock %}
